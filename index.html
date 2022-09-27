@@ -8,7 +8,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="style/style.css">
 </head>
-<body>
+<script src="script.js"></script>
+<body >
     
     <div id="interface">
         <header id="cabecalho">
@@ -16,17 +17,17 @@
                 <h1>Google Glass</h1>
                 <h2>A revolução do Google está chegando</h2>
             </hgroup>
-        
+            
             <img id="icone" src="imagens/glass-oculos-preto-peq.png" alt="">
         
             <nav>
                 <h1>Menu Principal</h1>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="menu/specs.html">Especificações</a></li>
-                    <li><a href="menu/fotos.html">Fotos</a></li>
-                    <li><a href="menu/multimidia.html">Multimídia</a></li>
-                    <li><a href="menu/fale-conosco.html">Fale conosco</a></li>
+                    <li onmouseover="mudafoto('imagens/home.png')" onmouseout="mudafoto('imagens/glass-oculos-preto-peq.png')"><a href="index.html">Home</a></li>
+                    <li onmouseover="mudafoto('imagens/especificacoes.png')" onmouseout="mudafoto('imagens/glass-oculos-preto-peq.png')"><a href="specs.html">Especificações</a></li>
+                    <li onmouseover="mudafoto('imagens/fotos.png')" onmouseout="mudafoto('imagens/glass-oculos-preto-peq.png')"><a href="fotos.html">Fotos</a></li>
+                    <li onmouseover="mudafoto('imagens/multimidia.png')" onmouseout="mudafoto('imagens/glass-oculos-preto-peq.png')"><a href="multimidia.html">Multimídia</a></li>
+                    <li onmouseover="mudafoto('imagens/contato.png')" onmouseout="mudafoto('imagens/glass-oculos-preto-peq.png')"><a href="fale-conosco.html">Fale conosco</a></li>
                 </ul>
             </nav>
         </header>
@@ -34,7 +35,7 @@
 
         <article id="noticia-principal">
         <hgroup>
-        <h2 class="h2">Tecnologia > &nbsp;&nbsp;&nbsp;&nbsp;Inovações</h2>
+        <h2 class="h2">Tecnologia > Inovações</h2>
         <h1 id="h1"  >Saiba tudo sobre o Google Glass</h1>
         <h2 class="h2">por Gustavo Guanabara</h2>
         <h3 id="h3">Atualizado em 23/Abril/2013</h3>
@@ -87,7 +88,7 @@
         <footer id="rodape">
             <p>
             Copyright 2013 - by Gui Developer
-            <a href="https://github.com/guilhermetrab" target="_blank">GitHub</a> | <a href="">Linkedin</a>
+            <a href="https://github.com/guilhermetrab" target="_blank">GitHub</a> | <a href="https://www.linkedin.com/in/guilherme-rodrigues-ferreira-745ab4250//" >Linkedin</a>
             </p>
         </footer>
     </div>
