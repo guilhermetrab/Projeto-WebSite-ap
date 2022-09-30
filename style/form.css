@@ -41,8 +41,11 @@ fieldset#endereco {
     background: url('../imagens/icone-endereco.png') no-repeat 95% 95%;
 }
 
-fieldset#contato{
-    background: url('../imagens/icone-contato.png') no-repeat ;
+fieldset#mensagem{
+    background: url('../imagens/icone-mensagem.png') no-repeat 95% 95%;
 }
 
+fieldset#pedido{
+    background: url('../imagens/icone-pagamento.png') no-repeat 95% 95%;
+}
 

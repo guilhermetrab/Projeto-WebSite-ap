@@ -71,16 +71,19 @@ header#cabecalho h2{
 nav{
     display: block;
 }
+
+
 nav h1 {
     display: none;
 }
 
 ul#nav{
+    display: flex;
     text-transform: uppercase;
     list-style: none;
     position: absolute;
     top: -20px;
-    left: 300px;
+    left: 400px;
 }
 
 nav li{
@@ -88,6 +91,8 @@ nav li{
     padding: 10px;
     background-color: #ddd;
     margin-left: 10px;
+    flex-direction: row;
+    align-items:flex-end ;
     
 }
 

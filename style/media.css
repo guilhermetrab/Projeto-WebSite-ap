@@ -10,9 +10,10 @@ div#tv-radio {
 audio#musica{
     display: block;
     position: relative;
-    left: ;
-    top: ;
-    width: ;
+    left: 587px;
+    top: 495px ;
+    width: 275px;
+    height: 40px;
 }
 
 iframe#video {
