@@ -7,6 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/form.css">
+    <script>
+        function calcular(){
+            var qtd = parseInt(document.getElementById('iqtd').value);
+            tot = qtd * 1000;
+            document.getElementById('ipt').value = tot;
+        }
+    </script>
 </head>
 <script src="script.js"></script>
 <body >
@@ -23,8 +31,7 @@
             <nav>
                 <h1>Menu Principal</h1>
                 <ul id="nav">
-                    <li onmouseover="mudafoto('imagens/home.png')" onmouseout="mudafoto('imagens/contato.png')"><a href="index.html">Home</a></li>
-                    
+                    <li onmouseover="mudafoto('imagens/home.png')" onmouseout="mudafoto('imagens/glass-oculos-preto-peq.png')"><a href="index.html">Home</a></li>
                     <li onmouseover="mudafoto('imagens/fotos.png')" onmouseout="mudafoto('imagens/contato.png')"><a href="fotos.html">Fotos</a></li>
                     <li onmouseover="mudafoto('imagens/multimidia.png')" onmouseout="mudafoto('imagens/contato.png')"><a href="multimidia.html">Multimídia</a></li>
                     <li onmouseover="mudafoto('imagens/especificacoes.png')" onmouseout="mudafoto('imagens/fotos.png')"><a href="specs.html">Especificações</a></li>
@@ -32,39 +39,68 @@
                 </ul>
             </nav>
         </header>
+        <article id="noticia-principal">
+            <hgroup>
+            <h2 class="h2">Fale Conosco > Contato</h2>
+            <h1 id="h1"  >Formulário de Contato</h1>
+            <h2 class="h2">por Gustavo Guanabara</h2>
+            <h3 id="h3">Atualizado em 23/Abril/2013</h3>
+            </hgroup>
 
-Fale Conosco > Contato
-Formulário de Contato
-por Gustavo Guanabara
-Atualizado em 01/Maio/2013
-
-Identificação do Usuário
-    Nome:
-    Senha:
-    E-mail:
-    Sexo:
-        - Masculino
-        - Feminino
-    Data de Nascimento:
-
-Endereço do Usuário
-    Logradouro:
-    Número:
-    Estado:
-    Cidade:
-
-Mensagem do Usuário
-    Grau de Urgência:
-    Mensagem:
-
-Quero um Google Glass
-    Gostaria de adquirir um Google Glass quando disponível
-    Cor:
-    Quantidade:
-    Preço Total: R$
-
-
-[BOTÃO ENVIAR]
+        <form action="mailto:guilhermerftrabalho@gmail.com" method="post" id="fcontato" oninput="calcular()">
+            <fieldset id="usuario">
+                <legend>Identificação do Usuário</legend>
+                    <p><label for="inome">Nome:</label> <input maxlength="30" max="20" placeholder="Nome completo" type="text" name="nome" id="inome"></input></p>
+                    <p><label for="isenha">Senha:</label><input minlength="8" type="password" name="senha" id="isenha"></p>
+                    <p><label for="iemail">E-mail:</label><input type="email" minlength="12" name="email" id="iemail"></p>
+                    <fieldset id="sexo">
+                        <legend>Sexo:</legend>
+                            <label for="imas"><input type="radio" name="sexo" id="imas"> Masculino</label><br>
+                            <label for="ifem"><input type="radio" name="sexo" id="ifem"> Feminino <br></label>
+                    </fieldset>
+                    <p>Data de Nascimento: <input type="date" name="nasc" id="inasc"></p>
+            </fieldset>
+            
+            <fieldset id="endereco">
+                <legend>Endereço do Usuário</legend>
+                    <p><label for="ilograd">Logradouro:</label><input type="text" name="lograd" id="ilograd"></p>
+                    <p><label for="inum">Número:</label><input type="number" name="num" id="inum"></p>
+                    <p><label for="iestado">Estado: </label><select  name="estado" id="iestado">
+                        <option value="Rio de Janeiro"></option>
+                        <optgroup label="Região Sudeste">
+                            <option selected value="SP">São paulo</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PR">Paraná</option>
+                        </optgroup>
+                        <optgroup label="Região Sul">
+                            <option value="SC">Santa Catarina</option>
+                            <option value="RGS">Rio Grande do Sul</option>
+                        </optgroup>
+                    </select></p>
+                    <p><label for="icidade">Cidade: </label><input type="text" name="cidade" id="icidade" list="cidade"></p>
+                    <datalist>
+                        <option id="cidade" value="Rio de Janeiro"></option>
+                        <option value="Nova Iguaçú"></option>
+                    </datalist>
+            </fieldset>
+            
+            <fieldset id="mensagem">
+                <legend>Mensagem do Usuário</legend>
+                    <p><label for="iurg">Grau de Urgência: <input type="range" name="urg" min="2" max="10" step=".5"  id="iurg"></label></p>
+                    <p><label for="imensagem">Mensagem:</label><textarea name="mensagem" id="imensagem" cols="45" rows="5"></textarea></p>
+            </fieldset>
+            
+            <fieldset id="pedido">
+                <legend>Quero um Google Glass</legend>
+                    <p><input type="checkbox" name="pad" id="ipad" checked><label for="ipad">Gostaria de adquirir um Google Glass quando disponível</label></p>
+                    <p><input type="color" name="cor" id="icor" value="#0000ff"> <label for="icor">Cor:</label></p>
+                    <p><label for="iqtd">Quantidade:</label><input type="number" value="0" maxlength="5" name="qtd" id="iqtd" min="0"></p>
+                    <p><label for="ipt">Preço Total: R$</label><input type="number" name="pt" id="ipt"> </p>
+                
+            </fieldset>
+            <input type="submit" value="enviar">
+        </form>
+    </div>
 
 <footer id="rodape">
     <p>
