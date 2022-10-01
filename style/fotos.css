@@ -5,7 +5,9 @@ ul#album-fotos {
     padding: 50px;
     overflow: hidden;
     list-style: none;
+    
 }
+
 ul#album-fotos li {
     float: left;
     width: 200px;

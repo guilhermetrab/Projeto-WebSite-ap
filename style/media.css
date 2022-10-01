@@ -5,6 +5,7 @@ div#tv-radio {
     height: 580px;
     margin: auto;
     background: url('../imagens/radio-tv.png') no-repeat;
+    
 }
 
 audio#musica{
@@ -19,7 +20,17 @@ audio#musica{
 iframe#video {
     display: block;
     position: relative;
-    top: 70px; ;
+    top: 53px; ;
     left: 100px;
     width: 410px;
+}
+
+@media screen and (max-width:950px) {
+    div#tv-radio {
+        display: block;
+        width: 900px;
+        height: 580px;
+        margin: auto;
+        background: url('../imagens/radio-tv.png') no-repeat ;
+    }
 }

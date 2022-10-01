@@ -1,6 +1,6 @@
 @charset "UTF-8";
 section#conteudo{
-    width: 1000px;
+    width: 600px;
     margin: auto;
 
 }
@@ -11,4 +11,9 @@ iframe#frame-spec{
     border: none;
     overflow: hidden;
 }
+    
+iframe#frame-spec::-webkit-scrollbar{
+    width: 0px;
+    height: 0px;
 
+}
