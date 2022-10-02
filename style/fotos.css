@@ -18,6 +18,11 @@ ul#album-fotos li {
     box-shadow: 1px 1px 3px rgba(0,0, 0, 0.418)
 }
 
+ul#album-fotos li:hover{
+    -webkit-transform: scale(1.5);
+    -webkit-transition: all .2s ease-in;
+}
+
 ul#album-fotos li#foto1{
     background: url('../imagens/galeria-01.jpg');
     background-position: 50% 50%;
@@ -109,7 +114,3 @@ ul#album-fotos li span:hover{
 
 }
 
-ul#album-fotos li:hover{
-    -webkit-transform: scale(1.5);
-    -webkit-transition: all .2s ease-in;
-}
