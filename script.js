@@ -12,9 +12,10 @@ function tela(){
 }
 
 function clickMenu(){
-    if(nav.style.display == 'bloco'){
-        nav.style.display = 'none'
+    if(navi.style.display =='none'){
+        navi.style.display = 'block'
     } else{
-        nav.style.display = 'block'
+        navi.style.display = 'none'
     }
+        
 }
